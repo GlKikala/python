@@ -1,0 +1,6 @@
+a = int(1)
+b = float(1)
+c = str(1)
+print(type(a))
+print(type(b))
+print(type(c))
