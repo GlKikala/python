@@ -1,6 +1,0 @@
-x = int(2)
-y = float(3.5)
-z = str("Hello world")
-print(x)
-print(y)
-print(z)
