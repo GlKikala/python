@@ -1,0 +1,6 @@
+def bob(a):
+    for i in a:
+        yield i
+
+a = 10
+print(list(bob(range(a))))
