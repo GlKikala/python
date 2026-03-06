@@ -1,0 +1,54 @@
+import re
+
+# Metacharacters
+re.findall(r'c.t',     'cat cot cut')
+re.findall(r'ab*',     'a ab abb')
+re.findall(r'ab+',     'a ab abb')
+re.findall(r'colou?r', 'color colour')
+re.findall(r'^\d+',    '123abc')
+re.findall(r'\d+$',    'abc123')
+re.findall(r'[aeiou]', 'hello')
+re.findall(r'кот|пёс', 'кот и пёс')
+re.findall(r'(\d+)',   'abc123')
+re.findall(r'\(\d+\)', '(123)')
+
+# Special Sequences
+re.findall(r'\d+', 'abc123')
+re.findall(r'\w+', 'hi world!')
+re.findall(r'\s+', 'a  b   c')
+re.findall(r'\D+', 'abc123')
+re.findall(r'\W+', 'hi world!')
+re.findall(r'\S+', 'a b  c')
+re.findall(r'\Ahi', 'hi world')
+re.findall(r'world\Z', 'hi world')
+
+# Sets and Character Classes
+re.findall(r'[a-z]+',    'Hello World')
+re.findall(r'[^aeiou]+', 'hello')
+re.findall(r'[a-zA-Z0-9]+', 'hi 123!')
+
+# Quantifiers
+re.findall(r'\d{3}',   '1 12 123 1234')
+re.findall(r'\d{2,}',  '1 12 123')
+re.findall(r'\d{2,3}', '1 12 123 1234')
+
+# re.search()
+re.search(r'\d+', 'abc123').group()
+
+# re.findall()
+re.findall(r'\d+', 'a1 b22 c333')
+
+# re.split()
+re.split(r'\s+', 'один  два   три')
+
+# re.sub()
+re.sub(r'\d+', 'X', 'a1 b22 c333')
+
+# re.match()
+re.match(r'\d+', '123abc').group()
+
+# Flags
+re.findall(r'hello', 'HELLO', re.IGNORECASE)
+re.findall(r'^\d+', '123\n456', re.MULTILINE)
+re.findall(r'.+', 'a\nb', re.DOTALL)
+re.findall(r'hello', 'HELLO\nHELLO', re.IGNORECASE | re.MULTILINE)
